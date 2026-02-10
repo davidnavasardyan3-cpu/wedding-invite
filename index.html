@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Դավիթ & Դիանա - Հարսանեկան հրավիրատոմս</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #f8f5f2;
+    color: #5a5a5a;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1.2s ease-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+h1 { font-size: 42px; font-weight: normal; }
+h2 { font-weight: normal; margin: 20px 0 10px; }
+
+.date {
+    font-size: 30px;
+    font-weight: bold;
+    color: #b89b82;
+    margin-top: 10px;
+}
+
+p { font-size: 18px; line-height: 1.6; color: #3c3c3c; }
+
+.image {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 14px;
+    margin: 20px auto;
+    display: block;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1.2s ease-out;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 15px;
+    background: #d8cfc4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.button:hover { 
+    background: #c4b8ab; 
+    transform: scale(1.05);
+}
+
+.countdown {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 15px;
+    min-width: 85px;
+    box-shadow: 0 8px 25px rgba(184,155,130,0.25);
+    animation: pulse 2.5s infinite;
+}
+
+.time-box span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #b89b82;
+}
+
+.time-box small { font-size: 14px; color: #777; }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+<body>
+
+<!-- Audio -->
+<audio id="wedding-music" src="wedding-music.mp3" autoplay loop></audio>
+
+<!-- Welcome Section -->
+<div class="section">
+    <h1>Դավիթ & Դիանա</h1>
+    <img src="photo1.jpg" class="image">
+    <p>Սիրով հրավիրում ենք Ձեզ մեր Հարսանյաց Հանդեսին</p>
+    <p class="date">19 Ապրիլի 2026</p>
+
+    <!-- Countdown -->
+    <div class="countdown" id="countdown">
+        <div class="time-box"><span id="days">0</span><small>Օր</small></div>
+        <div class="time-box"><span id="hours">0</span><small>Ժամ</small></div>
+        <div class="time-box"><span id="minutes">0</span><small>Րոպե</small></div>
+        <div class="time-box"><span id="seconds">0</span><small>Վայրկյան</small></div>
+    </div>
+
+    <!-- Photo2 immediately after countdown -->
+    <img src="photo2.jpg" class="image">
+</div>
+
+<!-- Ceremony Section -->
+<div class="section">
+    <h2>Պսակադրություն</h2>
+    <p>Աբովյան քաղաքի Սուրբ Հովհաննես եկեղեցի</p>
+    <p>Ժամը՝ 14:30</p>
+
+    <!-- Photo3 after time -->
+    <img src="photo3.jpg" class="image">
+    
+    <a href="https://www.google.com/maps/place/Saint+John+the+Baptist+Church/@40.2753705,44.6291425,414m/data=!3m1!1e3!4m6!3m5!1s0x406aa1cd852829d9:0xd8c583e01d008291!8m2!3d40.2758969!4d44.6314737!16s%2Fg%2F11cjkmr2w1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" class="button" target="_blank">Բացել քարտեզը</a>
+</div>
+
+<!-- Reception Section -->
+<div class="section">
+    <h2>Հարսանյաց Սրահ</h2>
+    <p>Չարենցավան քաղաքի Ginats Hall ում</p>
+    <p>Ժամը՝ 17:30</p>
+
+    <!-- Photo4 after time -->
+    <img src="photo4.jpg" class="image">
+
+    <a href="https://www.google.com/maps/place/Ginats/@40.4077124,44.6442228,123m/data=!3m1!1e3!4m6!3m5!1s0x4040250cb4f6c25d:0x60f98dfd7dc435ee!8m2!3d40.4079207!4d44.6444503!16s%2Fg%2F11h4kwdy1_?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" class="button" target="_blank">Բացել քարտեզը</a>
+</div>
+
+<!-- Closing Section -->
+<div class="section">
+    <!-- Photo5 at the very end -->
+    <img src="photo5.jpg" class="image">
+    <p>Սպասում ենք Ձեզ սիրով 💍</p>
+    <p>Խնդրում ենք հաստատել Ձեր ներկայությունը</p>
+    <p>մինչև Ապրիլի 10ը</p>
+    <p>Դավիթ: +374 55 06 88 55</p>
+    <p>Դիանա: +374 93 38 31 78</p>
+</div>
+
+<script>
+function revealSections() {
+    const elements = document.querySelectorAll('.section, .image');
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+        if(el.getBoundingClientRect().top < windowHeight - 100){
+            el.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', revealSections);
+window.addEventListener('load', revealSections);
+
+const weddingDate = new Date("2026-04-19T14:30:00").getTime();
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML =
+            "<h2>Այսօր մեր մեծ օրն է 💍</h2>";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>
